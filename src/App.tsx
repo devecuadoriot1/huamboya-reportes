@@ -121,14 +121,7 @@ export default function App() {
 
   const canDownload = docType === "pdf" && monthKey !== "" && !busy;
 
-  // Rango calculado por mes
-  const monthRange = useMemo(() => {
-    if (!monthKey) return null;
-    const [y, m] = monthKey.split("-").map(Number);
-    const start = new Date(y, (m ?? 1) - 1, 1, 0, 0, 0, 0);
-    const end = new Date(y, (m ?? 1), 1, 0, 0, 0, 0);
-    return { start, end };
-  }, [monthKey]);
+  
 
   async function handleDownload() {
     setMsg({ type: "", text: "" });
