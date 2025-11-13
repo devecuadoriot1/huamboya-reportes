@@ -8,7 +8,7 @@ const BG_URL = "/fondo.png";
 // Manifest (seguro) de documentos disponibles (YYYY-MM -> URL)
 const AVAILABLE_DOCS: Record<string, string> = {
   "2025-11": "/Reporte_complementario_vehiculos_sin_movimiento_2025-11.pdf",
-  "2025-10": "/Reporte_complementario_vehiculos_sin_movimiento_2025-10.pdf",
+  //"2025-10": "/Reporte_complementario_vehiculos_sin_movimiento_2025-10.pdf",
 };
 
 export default function App() {
@@ -121,7 +121,7 @@ export default function App() {
 
   const canDownload = docType === "pdf" && monthKey !== "" && !busy;
 
-  
+
 
   async function handleDownload() {
     setMsg({ type: "", text: "" });
